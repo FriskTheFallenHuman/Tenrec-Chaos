@@ -1,0 +1,33 @@
+I. Rename the .yyz file before importing the project to GameMaker. This is important, or
+else there will be save and config files conflicts with other projects using Orbinaut
+that kept the default name
+
+II. Orbinaut Framework uses a custom GameMaker effect to provide distortion effects.
+If you don't have it installed, the project will work fine without it but you
+won't be able to use / see it in your compiled game
+
+This doesn't affect the playable build provided with the release, because it is already compiled
+with the effect installed on our end!
+
+To install the effect, please, go to:
+WINDOWS: C:/ProgramData/GameMakerStudio2/Cache/runtimes/(latest_runtime)/bin/FiltersAndEffects
+MACOS: Users/Shared/GameMakerStudio2/Cache/runtimes/(latest_runtime)/bin/FiltersAndEffects
+
+and put the _filter_waves folder here. Please note the each time GameMaker 
+runtime is updated, you have to re-install the effect!
+
+III. Possible launch issues:
+- Launching the build resulting in "can't read byte" error: remove the OrbinautFramework folder from AppData -> Local
+- Unable to launch the game from GameMaker (can't open file error): launch GameMaker with Admin permissions
+
+IV. Playable Build FAQ
+
+Q: I can't use Game Start, it results in a message that stage is unable to load!
+A: You aren't supposed to use Game Start. This is the build of how the framework itself is provided
+(i.e. for those who don't have GameMaker installed). Please, use Scene Select
+
+Q: Am I able to toggle various features that were noted in About section?
+A: No, that's only possible with the project itself.
+
+PLEASE ALSO READ THE WIKI!
+https://github.com/TrianglyRU/OrbinautFramework/wiki
