@@ -7,6 +7,7 @@
 	Ysp			   = 0;
 	Timer		   = 256;
 	PickupTimeout  = 64;
+	SavedRings	= 0;
 	
 	// Set object properties
 	object_set_unload(FlagDelete);

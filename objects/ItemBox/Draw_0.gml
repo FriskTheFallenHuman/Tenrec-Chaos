@@ -9,10 +9,23 @@
 	{
 		if CardSprite != 11
 		{
-			draw_sprite(spr_obj_itembox_card, CardSprite, floor(CardX), floor(CardY));
+			if CardSpecialType == 1
+				draw_sprite(character_get_asset_name("spr_obj_itembox_card_"), CardSprite, floor(CardX), floor(CardY));
+			else if CardSpecialType == 2
+				draw_sprite(spr_obj_itembox_emeralds_card, global.Emeralds, floor(CardX), floor(CardY));
+			else
+				draw_sprite(spr_obj_itembox_card, CardSprite, floor(CardX), floor(CardY));
 		}
 	}
 	else if State and State < 3
 	{
-		draw_sprite(spr_obj_itembox_card, CardSprite, floor(CardX), floor(CardY));
+		if CardSprite != 11
+		{
+			if CardSpecialType == 1
+				draw_sprite(character_get_asset_name("spr_obj_itembox_card_"), CardSprite, floor(CardX), floor(CardY));
+			else if CardSpecialType == 2
+				draw_sprite(spr_obj_itembox_emeralds_card, global.Emeralds, floor(CardX), floor(CardY));
+			else
+				draw_sprite(spr_obj_itembox_card, CardSprite, floor(CardX), floor(CardY));
+		}
 	}

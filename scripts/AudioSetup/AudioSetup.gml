@@ -4,8 +4,8 @@ function AudioSetup()
 	/* The game will refer to data stored here to loop music tracks. 
 	If no data set here for the track, it won't be looped */
 	
-	audio_bgm_setloop(TestStage,	 16.74, 87.66);
-	audio_bgm_setloop(SuperTheme,	 3.45,  23.12);
+	audio_bgm_setloop(MidnigthGreenHouse,	 40.0, 83.0);
+	audio_bgm_setloop(SuperTheme,	0,  64.49);
 	audio_bgm_setloop(BossTheme,	 6.33,  31.93);
 	audio_bgm_setloop(SpecialTheme,	 11.21, 49.76);
 	audio_bgm_setloop(BonusTheme,	 10.85, 39.85);
@@ -15,7 +15,7 @@ function AudioSetup()
 	/* The game will refer to data stored here to play an additional channel. 
 	If no data set here for the track, nothing will happen. You are not forced to do this */
 
-	audio_bgm_add_subtrack(TestStage,     TestStage_DAC);
+	audio_bgm_add_subtrack(MidnigthGreenHouse,     MidnigthGreenHouse_DAC);
 	audio_bgm_add_subtrack(HighSpeed,     HighSpeed_DAC);
 	audio_bgm_add_subtrack(Invincibility, Invincibility_DAC);
 	audio_bgm_add_subtrack(ExtraLife,     ExtraLife_DAC);

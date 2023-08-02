@@ -1,12 +1,14 @@
 /// @description Main
 // You can call your scripts in this editor
 	
+	/*
 	if PlayerType == "Sonic & Tails" and global.Character == CharKnuckles
 	or PlayerType == "Knuckles"		 and global.Character != CharKnuckles
 	{
 		visible = false;
 		return;
 	}
+	*/
 	
 	switch State
 	{
@@ -57,28 +59,78 @@
 		break;
 		case 2:
 		{
-			// Check if the player passed by the right boundary
-			if floor(Player.PosX) > Stage.RightBoundary - 24
+			/* S1 Behaviour */
+			
+			if !global.StageTransitions
 			{
 				if Stage.IsFinished < 2
 				{
-					// Increment stage state
-					Stage.IsFinished  = 2;
-					
-					audio_bgm_play(AudioPrimary, ActClear);
-				}	
-			}
+					// Check if the player passed by the right boundary
+					if floor(Player.PosX + Player.Xsp) > Stage.RightBoundary - 24
+					{
+						Stage.IsFinished = 2; 
+						audio_bgm_play(AudioPrimary, ActClear);
+					}
 				
-			// Take control away from the player
-			if !Player.DebugMode
-			{
-				if !Input.IgnoreInput
-				{
-					Input.IgnoreInput = true;
+					// Take away control from the player
+					if Player.Grounded and !Input.IgnoreInput
+					{
+						Input.IgnoreInput = true;
+					}
 				}
-				else
+				
+				// Force player movement
+				if Input.IgnoreInput
 				{
 					Input.Right = true;
+				}
+			}
+			
+			/* Transition Behaviour */
+			
+			else if Player.Grounded
+			{
+				if Stage.IsFinished < 2
+				{
+					if global.Character == CharSurge
+					{
+						ClearAnim = choose(AnimClear, AnimClear, AnimClear, AnimClearAlt);
+					}
+					else
+					{
+						ClearAnim = AnimClear;
+					}
+					
+					if ClearAnim == AnimClearAlt
+					{
+						Player.Xsp		=  1.5 * Player.Facing;
+						Player.Ysp		= -3.25;
+						Player.Grounded =  false;
+						
+						// Force animation
+						Player.Animation = ClearAnim;
+					}
+					else
+					{
+						Player.Xsp = 0;
+						Player.Ysp = 0;
+					}
+
+					Player.Inertia    = 0;
+					Stage.IsFinished  = 2; 
+					Input.IgnoreInput = true;
+						
+					// Play resuts music
+					audio_bgm_play(AudioPrimary, ActClear);
+				}
+				else if Player.Grounded
+				{
+					Player.Inertia = 0;
+					Player.Xsp	   = 0;
+					Player.Ysp	   = 0;
+					
+					// Force animation
+					Player.Animation = ClearAnim;
 				}
 			}
 		}

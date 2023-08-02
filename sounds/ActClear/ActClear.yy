@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "ActClear",
   "conversionMode": 0,
   "compression": 2,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "ActClear.ogg",
-  "duration": 6.161875,
+  "duration": 6.286281,
   "parent": {
     "name": "BGM",
     "path": "folders/Audio/BGM.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ActClear",
-  "tags": [],
-  "resourceType": "GMSound",
 }

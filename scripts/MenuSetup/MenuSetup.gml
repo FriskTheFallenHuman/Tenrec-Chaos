@@ -37,9 +37,7 @@ function MenuSetup()
 	
 	// Character Select
 	menu_add_header(3,    "SELECT A PLAYER");
-	menu_add_option(3, 0, "SONIC",	  2);
-	menu_add_option(3, 1, "TAILS",	  2);
-	menu_add_option(3, 2, "KNUCKLES", 2);
+	menu_add_option(3, 0, "SURGE",	  2);
 		
 	// Stage Select
 	menu_add_header(4,    "SELECT A STAGE");
@@ -51,11 +49,12 @@ function MenuSetup()
 	
 	// Screen select
 	menu_add_header(5,    "SELECT A SCREEN");
-	menu_add_option(5, 0, "SPLASH",		   Screen_Splash);
-	menu_add_option(5, 1, "CONTINUE",	   Screen_Continue);
-	menu_add_option(5, 2, "SPECIAL START", Screen_SStage);
-	menu_add_option(5, 3, "- -",		   noone);
+	menu_add_option(5, 0, "SEGA",    Screen_SEGA);
+	menu_add_option(5, 1, "SPLASH",		   Screen_Splash);
+	menu_add_option(5, 2, "CONTINUE",	   Screen_Continue);
+	menu_add_option(5, 3, "SPECIAL START", Screen_SStage);
 	menu_add_option(5, 4, "- -",		   noone);
+	menu_add_option(5, 5, "- -",		   noone);
 	
 	// Options
 	menu_add_header(6,    "OPTIONS");

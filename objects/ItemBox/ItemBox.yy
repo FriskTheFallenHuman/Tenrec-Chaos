@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "ItemBox",
   "spriteId": {
     "name": "spr_obj_itembox",
     "path": "sprites/spr_obj_itembox/spr_obj_itembox.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -21,14 +25,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [
-    {"varType":6,"value":"\"Empty\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"BoxType","varType":6,"value":"\"Empty\"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "\"Empty\"",
         "\"10 Rings\"",
+        "\"Combine Ring\"",
         "\"High Speed\"",
         "\"Invincibility\"",
         "\"Barrier\"",
@@ -37,15 +42,13 @@
         "\"Water Barrier\"",
         "\"Extra Life\"",
         "\"Eggman\"",
-      ],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"BoxType","tags":[],"resourceType":"GMObjectProperty",},
+        "\"Super Form\"",
+        "\"Emeralds\"",
+      ],"multiselect":false,"filters":[],},
   ],
   "overriddenProperties": [],
   "parent": {
     "name": "Stage Objects",
     "path": "folders/Stage Objects.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ItemBox",
-  "tags": [],
-  "resourceType": "GMObject",
 }

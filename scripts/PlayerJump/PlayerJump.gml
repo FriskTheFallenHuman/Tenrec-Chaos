@@ -39,7 +39,7 @@ function PlayerJump()
 	// Transform into the super form
 	if global.Emeralds == 7 and !SuperState and Rings >= 50 and !Stage.IsFinished
 	{
-		if global.Character != CharSonic or BarrierType <= BarrierNormal
+		if global.Character != CharSurge or BarrierType <= BarrierNormal
 		{
 			Animation		    = AnimTransform;
 			InvincibilityFrames = 0;
@@ -64,7 +64,7 @@ function PlayerJump()
 	// Perform character action
 	switch global.Character
 	{
-		case CharSonic:
+		case CharSurge:
 		{	
 			if BarrierType <= BarrierNormal
 			{	
@@ -152,43 +152,6 @@ function PlayerJump()
 					break;
 				}
 			}
-		}
-		break;
-		case CharTails:
-		{
-			RadiusX		= DefaultRadiusX;
-			RadiusY		= DefaultRadiusY;
-			AirLock     = false;
-			Jumping     = false;
-			Spinning    = false;
-			FlightState = true;
-			FlightValue = 480;
-			Grv			= 0.03125;
-			
-			if !IsUnderwater
-			{
-				audio_sfx_play(sfxFlying, true);
-			}
-				
-			Input.ABC      = false;
-			Input.ABCPress = false;
-		}
-		break;
-		case CharKnuckles:
-		{
-			Gsp		= 0;
-			Xsp		= 4 * Facing;
-			Ysp		= Ysp <= 0 ? 0 : Ysp + 2;
-			
-			RadiusX		   = 10;
-			RadiusY		   = 10;
-			AirLock        = false;
-			Jumping        = false;
-			Spinning       = false;
-			Animation	   = AnimGlide;
-			GlideState     = GlideAir;
-			GlideDirection = Facing;
-			GlideValue     = Facing == FlipLeft ? 0 : 180;
 		}
 		break;
 	}

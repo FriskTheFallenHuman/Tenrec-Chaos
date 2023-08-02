@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "instance_initialise",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game Functions",
-    "path": "folders/Game Functions.yy",
+    "name": "Instances",
+    "path": "folders/Game Functions/Instances.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "instance_initialise",
-  "tags": [],
-  "resourceType": "GMScript",
 }

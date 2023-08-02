@@ -26,14 +26,8 @@ function DiscordSetup()
 	{
 		switch global.Character
 		{
-			case CharSonic:    
-				var Char = "Sonic";
-			break;
-			case CharTails:	   
-				var Char = "Tails";   
-			break;
-			case CharKnuckles: 
-				var Char = "Knuckles";
+			case CharSurge:    
+				var Char = "Surge";
 			break;
 			default:		  
 				var Char = "";

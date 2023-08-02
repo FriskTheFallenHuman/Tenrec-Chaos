@@ -18,29 +18,18 @@
 	// Set character's sprite data
 	switch global.Character
 	{
-		case CharSonic:
+		case CharSurge:
 		{		
-			CharSprite = [tex_obj_cont_sonic, spr_sonic_idle, spr_sonic_walk, spr_sonic_run];
+			CharSprite = [tex_obj_cont_sonic, spr_surge_idle, spr_surge_walk, spr_surge_run];
 			CharSpeed  = [10, 0];
-		}
-		break;
-		case CharTails:
-		{
-			CharSprite = [tex_obj_cont_tails, spr_tails_idle, spr_tails_walk, spr_tails_run, spr_tails_dash];
-			CharSpeed  = [24, 0];
-		}
-		break;
-		case CharKnuckles:
-		{
-			CharSprite = [tex_obj_cont_knux, spr_knuckles_idle, spr_knuckles_walk, spr_knuckles_run];
-			CharSpeed  = [[24, 12], 0];
 		}
 		break;
 	}
 	var SpriteData = [CharSprite[0], CharSpeed[0]];
 	
 	// Create character object and set an animation for them
-	CharObject = instance_create(RoomX, RoomY + 45 + (global.Character == CharTails) * 4, ContinueCharacter);
+	//CharObject = instance_create(RoomX, RoomY + 45 + (global.Character == CharTails) * 4, ContinueCharacter);
+	CharObject = instance_create(RoomX, RoomY + 45 + (global.Character == CharSurge) * 4, ContinueCharacter);
 	with CharObject
 	{
 		animation_play(SpriteData[0], SpriteData[1], 0);

@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "tile_check",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game Functions",
-    "path": "folders/Game Functions.yy",
+    "name": "Tiles",
+    "path": "folders/Game Functions/Tiles.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "tile_check",
-  "tags": [],
-  "resourceType": "GMScript",
 }

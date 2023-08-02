@@ -1,6 +1,11 @@
 /// @ Called in Background Controller -> Create Event
 function BackgroundSetup()
 {
+	if !global.StageTransitions
+	{
+		return;
+	}
+
 	switch room
 	{	
 		// Test Stage

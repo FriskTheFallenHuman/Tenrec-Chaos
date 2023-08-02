@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "SuperTheme_DAC",
   "conversionMode": 0,
   "compression": 2,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "SuperTheme_DAC.ogg",
-  "duration": 24.55,
+  "duration": 68.51667,
   "parent": {
     "name": "BGM",
     "path": "folders/Audio/BGM.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "SuperTheme_DAC",
-  "tags": [],
-  "resourceType": "GMSound",
 }

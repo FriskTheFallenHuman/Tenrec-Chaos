@@ -17,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 32,
   "height": 41,
   "textureGroupId": {
@@ -75,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Characters.yy",
+    "name": "Super",
+    "path": "folders/Characters/Surge The Tenrec/Super.yy",
   },
 }

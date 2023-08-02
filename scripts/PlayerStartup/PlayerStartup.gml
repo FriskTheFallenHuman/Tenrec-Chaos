@@ -54,6 +54,7 @@ function PlayerStartup()
 	VisualAngle			= 0;
 	Animation			= 0;
 	Rings				= 0;
+	IsCombiRingsEnable	=false;
 	DebugMode           = 0;
 	DebugItem			= 0;
 	DebugSpeed			= 0;
@@ -76,35 +77,17 @@ function PlayerStartup()
 	// Set default sprite and depth
 	switch global.Character
 	{
-		case CharSonic:
-			sprite_index = spr_sonic_idle;
-		break;
-		case CharTails:
-			sprite_index = spr_tails_idle;
-		break;
-		case CharKnuckles:
-			sprite_index = spr_knuckles_idle;
+		case CharSurge:
+			sprite_index = spr_surge_idle;
 		break;
 	}
 	
 	// Set collision radiuses
-	if global.Character != CharTails
-	{
-		DefaultRadiusY = 19;
-		DefaultRadiusX = 9;
-		SmallRadiusY   = 14;
-		SmallRadiusX   = 7;
-	}
-	else
-	{
-		DefaultRadiusY = 15;
-		DefaultRadiusX = 9;
-		SmallRadiusY   = 14;
-		SmallRadiusX   = 7;
-		
-		// Also create Tails' tails
-		instance_create(x, y, TailsObject);
-	}
+	DefaultRadiusY = 19;
+	DefaultRadiusX = 9;
+	SmallRadiusY   = 14;
+	SmallRadiusX   = 7;
+
 	RadiusX = DefaultRadiusX;
 	RadiusY = DefaultRadiusY;
 	

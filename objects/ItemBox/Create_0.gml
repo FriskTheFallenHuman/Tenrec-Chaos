@@ -8,9 +8,10 @@
 	PosX	  = x;
 	PosY	  = y;
 	CardX	  = x;
-	CardY	  = y - 3;
+	CardY	  = y - 5;
 	Timer     = 5;
 	CardSpeed = 3;
+	CardSpecialType = 0;
 	IsFalling = 0;
 	State	  = 0;
 	Ysp		  = 0;
@@ -20,29 +21,40 @@
 		case "10 Rings":
 			CardSprite = 0;
 		break;
-		case "Barrier":
+		case "Combine Ring":
 			CardSprite = 1;
 		break;
-		case "Thunder Barrier":
+		case "Barrier":
 			CardSprite = 2;
 		break;
-		case "Flame Barrier":
+		case "Thunder Barrier":
 			CardSprite = 3;
 		break;
-		case "Water Barrier":
-			CardSprite = 4;
+		case "Flame Barrier":
+			CardSprite = 4
 		break;
-		case "High Speed":
+		case "Water Barrier":
 			CardSprite = 5;
 		break;
-		case "Invincibility":
+		case "High Speed":
 			CardSprite = 6;
 		break;
+		case "Invincibility":
+			CardSprite = 7;
+		break;
 		case "Extra Life":
-			CardSprite = 7 + global.Character;
+			CardSprite = 8;
+			CardSpecialType = 1;
 		break;
 		case "Eggman":
+			CardSprite = 8;
+		break;
+		case "Super Form":
+			CardSprite = 9;
+		break;
+		case "Emeralds":
 			CardSprite = 10;
+			CardSpecialType = 2;
 		break;
 		case "Empty":
 			CardSprite = 11;

@@ -20,8 +20,8 @@ function PlayerBalance()
 				Animation = AnimBalanceFlip;
 			}
 			
-			// Play additional animations for Sonic
-			if global.Character == CharSonic and !SuperState
+			// Play additional animations for Surge
+			if global.Character == CharSurge and !SuperState
 			{
 				if panicCondition
 				{
@@ -50,8 +50,8 @@ function PlayerBalance()
 				Animation = AnimBalanceFlip;
 			}
 			
-			// Play additional animations for Sonic
-			if global.Character == CharSonic and !SuperState
+			// Play additional animations for Surge
+			if global.Character == CharSurge and !SuperState
 			{
 				if panicCondition
 				{

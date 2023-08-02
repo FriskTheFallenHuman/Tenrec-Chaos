@@ -20,18 +20,18 @@
 				PlayerLevelBound();
 				PlayerPosition();
 				PlayerSonicDropdash();
-				PlayerTailsFlight();
+				//PlayerTailsFlight();
 				PlayerAirLevelCollision();
 			}
 			else
 			{
 				// Gliding or climbing
 				PlayerMovementAir();
-				PlayerKnuxGlideControl();
+				//PlayerKnuxGlideControl();
 				PlayerLevelBound();
 				PlayerPosition();
-				PlayerKnuxGlide();
-				PlayerKnuxClimb();
+				//PlayerKnuxGlide();
+				//PlayerKnuxClimb();
 			}
 			PlayerResetOnFloor();
 			PlayerHitboxUpdate();

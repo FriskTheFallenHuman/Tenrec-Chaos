@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "ExtraLife",
   "conversionMode": 0,
   "compression": 2,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "ExtraLife.ogg",
-  "duration": 4.031125,
+  "duration": 3.45,
   "parent": {
     "name": "BGM",
     "path": "folders/Audio/BGM.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ExtraLife",
-  "tags": [],
-  "resourceType": "GMSound",
 }

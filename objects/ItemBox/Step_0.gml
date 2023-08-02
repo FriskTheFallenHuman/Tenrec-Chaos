@@ -29,7 +29,7 @@
 			}
 			
 			// If so, destroy
-			if Check and (Player.Spinning or Player.GlideState > GlideFall) and Player.OnObject != id
+			if Check and (Player.Spinning) and Player.OnObject != id
 			{
 				if object_check_player(ColHitbox2)
 				{
@@ -91,7 +91,7 @@
 			}
 			
 			CardX = x;
-			CardY = y - 3;
+			CardY = y - 5;
 		}
 		break;
 		case 1:
@@ -119,6 +119,15 @@
 					audio_sfx_play(sfxRingRight, false);
 					
 					Player.Rings += 10;		
+				}
+				break;
+				case "Combine Ring":
+				{
+					audio_sfx_play(sfxCombineRingLeft,  false);
+					audio_sfx_play(sfxCombineRingRight, false);
+
+					// Enable the Combine ring flag
+					Player.IsCombiRingsEnable = true;
 				}
 				break;
 				case "High Speed":
@@ -249,6 +258,41 @@
 				case "Eggman":
 				{
 					player_damage(false, false, false);
+				}
+				break;
+				case "Emeralds":
+				{
+					global.Emeralds++;
+					audio_sfx_play(sfxScoreTally, false);
+				}
+				break;
+				case "Super Form":
+				{
+					// Transform into the super form
+					if !Player.SuperState and !Stage.IsFinished
+					{
+						// Ensure the player has some rings
+						Player.Rings += 50;
+
+						if global.Character != CharSurge or Player.BarrierType <= BarrierNormal
+						{
+							Player.Animation		    = AnimTransform;
+							Player.InvincibilityFrames = 0;
+							Player.Jumping				= false;
+							Player.Spinning			= false;
+							Player.InvincibleBonus		= false;
+							Player.AllowCollision		= false;
+							Player.SuperStateValue		= false;
+							Player.SuperState			= true;
+							Player.AirLock				= true;
+	
+							Player.RadiusX = Player.DefaultRadiusX;
+							Player.RadiusY = Player.DefaultRadiusY;
+
+							audio_sfx_play(sfxTransform, false);		
+							audio_bgm_play(AudioPrimary, SuperTheme);
+						}
+					}
 				}
 				break;
 			}

@@ -6,14 +6,8 @@
 	
 	switch global.Character
 	{
-		case CharSonic:
-			sprite_index = gui_icon_sonic;
-		break;
-		case CharTails:
-			sprite_index = gui_icon_tails;
-		break;
-		case CharKnuckles:
-			sprite_index = gui_icon_knuckles;
+		case CharSurge:
+			sprite_index = gui_icon_surge;
 		break;
 	}
 	animation_play(sprite_index, 16, 0);

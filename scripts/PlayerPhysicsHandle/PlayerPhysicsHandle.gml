@@ -1,5 +1,5 @@
 function PlayerPhysicsHandle()
-{	
+{
 	// Surface physics
 	if !IsUnderwater
 	{	
@@ -16,14 +16,14 @@ function PlayerPhysicsHandle()
 			TopAcc		  = 6;	
 			ClimbSpeed    = 1;
 			JumpMin		  = -4;
-			Jump		  = global.Character == CharKnuckles ? -6 : -6.5;
+			Jump		  = -6.5;
 		}
 		
 		// Super physics
 		else
 		{
 			// Sonic
-			if global.Character == CharSonic
+			if global.Character == CharSurge
 			{
 				Acc     = 0.1875;
 				AirAcc  = 0.375;
@@ -35,8 +35,6 @@ function PlayerPhysicsHandle()
 				JumpMin = -4;
 				Jump    = -8;
 			}
-			
-			// Tails and Knuckles
 			else
 			{
 				Acc           = 0.09375;
@@ -49,7 +47,7 @@ function PlayerPhysicsHandle()
 				TopAcc		  = 8;
 				ClimbSpeed    = 2;
 				JumpMin		  = -4;
-				Jump          = global.Character == CharKnuckles ? -6 : -6.5;
+				Jump          = -6.5;
 			}
 		}
 		
@@ -80,14 +78,14 @@ function PlayerPhysicsHandle()
 			TopAcc		  = 3;	
 			ClimbSpeed    = 1;
 			JumpMin		  = -2;
-			Jump		  = global.Character == CharKnuckles ? -3 : -3.5;
+			Jump		  = -3.5;
 		}
 		
 		// Super physics
 		else
 		{
 			// Sonic
-			if global.Character == CharSonic
+			if global.Character == CharSurge
 			{
 				Acc     = 0.09375;
 				AirAcc  = 0.1875;
@@ -113,7 +111,7 @@ function PlayerPhysicsHandle()
 				TopAcc		  = 4;
 				ClimbSpeed    = 2;
 				JumpMin		  = -2;
-				Jump		  = global.Character == CharKnuckles ? -3 : -3.5;
+				Jump		  = -3.5;
 			}
 		}
 	}
@@ -121,14 +119,14 @@ function PlayerPhysicsHandle()
 	// Overwrite RollDec for Tails
 	if !global.SKRollDeceleration
 	{
-		if global.Character == CharTails
-		{
+		//if global.Character == CharTails
+		//{
 			RollDec = Dec / 4;
-		}
+		//}
 	}
 	
 	// Overwrite rolling friction constant when super
-	else if SuperState
+	/*else*/ if SuperState
 	{
 		RollFrc = 0.0234375;
 	}

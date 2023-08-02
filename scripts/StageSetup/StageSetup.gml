@@ -16,14 +16,14 @@ function StageSetup()
 			ActID            = 0;
 			WaterLevel       = 1440;
 			WaterEnabled     = true;
-			StageMusic       = TestStage;
+			StageMusic       = MidnigthGreenHouse;
 			AnimatedGraphics = [tex_tsz_anitile, 6];
 			AnimalSet        = [spr_obj_animal_flicky, spr_obj_animal_ricky];
 			BottomBoundary   = 1040;
 			
-			NextStage	 = Screen_DevMenu;
+			NextStage	 = Screen_SEGA;
 			SaveProgress = false;
-			IsFinalStage = false;	
+			IsFinalStage = true;
 		}
 		break;
 		

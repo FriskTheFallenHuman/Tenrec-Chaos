@@ -12,27 +12,9 @@
 	SparkleY   = [-16, 8, 0, -8, -8, 0, 8, 16];
 	
 	// Define sprites to use
-	switch global.Character
-	{
-		case CharSonic:
-		{
-			SpriteData[0] = spr_obj_clearpanel_start_st;
-			SpriteData[1] = spr_obj_clearpanel_end_s;
-		}
-		break;
-		case CharTails:
-		{
-			SpriteData[0] = spr_obj_clearpanel_start_st;
-			SpriteData[1] = spr_obj_clearpanel_end_t;
-		}
-		break;
-		case CharKnuckles:
-		{
-			SpriteData[0] = spr_obj_clearpanel_start_k;
-			SpriteData[1] = spr_obj_clearpanel_end_k;
-		}
-		break;
-	}
+	SpriteData[0] = spr_obj_clearpanel_start_st;
+	SpriteData[1] = character_get_asset_name("spr_obj_clearpanel_end_");
+
 	sprite_index = SpriteData[0];
 	
 	// Set object properties

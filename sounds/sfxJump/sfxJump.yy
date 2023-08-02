@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "sfxJump",
   "conversionMode": 0,
   "compression": 2,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfxJump.wav",
-  "duration": 0.434921,
+  "duration": 0.420952,
   "parent": {
     "name": "SFX",
     "path": "folders/Audio/SFX.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sfxJump",
-  "tags": [],
-  "resourceType": "GMSound",
 }

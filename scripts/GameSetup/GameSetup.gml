@@ -2,8 +2,8 @@
 function GameSetup()
 {
 	// Game settings
-	global.WindowTitle     = "Orbinaut Framework";
-	global.StartRoom	   = Screen_DevMenu;
+	global.WindowTitle     = "Tenrec Chaos";
+	global.StartRoom	   = Screen_SEGA;
 	global.DevMode         = true;
 	global.ShowSplash      = true;
 	global.Width           = 400;
@@ -20,31 +20,33 @@ function GameSetup()
 	
 	// Originals differences. By defualt, the framework is in a "mix" state
 	global.SpindashEnabled    = true;
-	global.PeeloutEnabled	  = true;
-	global.DropdashEnabled    = false;
+	global.PeeloutEnabled	  = false;
+	global.DropdashEnabled    = true;
 	global.DSpinAttackEnabled = true;
 	global.GroundSpeedcap	  = false;
 	global.AirSpeedcap	      = false;
 	global.RolljumpControl    = false;
 	global.S2SpringBehaviour  = true;
 	global.S2FloorCollision	  = true;
-	global.S3SlopePhysics	  = false;
+	global.S3SlopePhysics	  = true;
 	global.S3WaterPhysics     = true;
 	global.S3DeathRestart     = true;
-	global.SKCrouch			  = false;
+	global.SKCrouch			  = true;
 	global.SKRollDeceleration = true;
 	global.SKWallCollision	  = true;
-	global.SKItemBoxBehaviour = false;
+	global.SKItemBoxBehaviour = true;
 	global.CDStageTimer	      = true;
-	global.CDCamera			  = false;
+	global.CDCamera			  = true;
+	global.StageTransitions   = true;
 	
 	// Orbinaut improvements
 	global.SmoothRotation	    = true;
 	global.RichPresenceSupport  = true;
+	global.RichPresenceID  = "795659000645287996";
 	global.PreciseRingBehaviour = false;
-	global.FixRollJump		    = false;
+	global.FixRollJump		    = true;
 	global.FixDashRelease		= true;
-	global.NoRollSpeedLimit	    = false;
+	global.NoRollSpeedLimit	    = true;
 	global.FlightCancel	        = false;
 	global.BetterPlayerTileGrip = true;
 	
@@ -72,7 +74,7 @@ function GameSetup()
 	global.SpecialRingList = [];
 	
 	// Font setup
-	Font.FontDefault = font_add_sprite_ext(font_default, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*.:!-+", false, 0);
+	Font.FontDefault = font_add_sprite_ext(font_default, "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890*.:!-+=?", false, 0);
 	Font.FontMenu    = font_add_sprite_ext(font_menu, "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:-></", false, 1);
 	Font.FontCard    = font_add_sprite_ext(font_card, "ABCDEFGHIJKLMNOPQRSTUVWXYZ_", true, 1);
 	Font.FontDigits1 = font_add_sprite_ext(font_counter, "0123456789:';", false, 1);

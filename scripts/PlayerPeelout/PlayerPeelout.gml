@@ -1,6 +1,6 @@
 function PlayerPeelout()
 {
-	if !global.PeeloutEnabled or global.Character != CharSonic
+	if !global.PeeloutEnabled or global.Character != CharSurge
 	{
 		return;
 	}

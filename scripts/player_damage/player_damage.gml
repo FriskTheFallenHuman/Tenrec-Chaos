@@ -29,10 +29,6 @@ function player_damage(isFlame,isThunder,instantKill)
 		// Kill player
 		if !Rings and !BarrierType or instantKill
 		{	
-			if global.Character == CharTails
-			{
-				TailsObject.visible = false;
-			}
 			Camera.Enabled = false;
 			
 			AllowCollision      = false;
@@ -69,30 +65,64 @@ function player_damage(isFlame,isThunder,instantKill)
 				var Direction = -1;
 				var Angle     = 168.75;
 				var Speed     = 4;
-			
-				for (var i = 0; i < min(Rings, 32); i++) 
+		
+				#region Standard Rings
+				if !IsCombiRingsEnable
 				{
-					// Spawn ring
-					var NewObject = instance_create(PosX, PosY, ShatteredRing);
-					if  i == 16 
-					{ 
-						Angle = 168.75; 
-						Speed = 2;
-					}
-					with NewObject
+					for (var i = 0; i < min(Rings, 32); i++) 
 					{
-						Xsp = Speed * dsin(Angle) * Direction;
-						Ysp = Speed * dcos(Angle);
-					}
+						// Spawn ring
+						var NewObject = instance_create(PosX, PosY, ShatteredRing);
+						if  i == 16
+						{ 
+							Angle = 168.75; 
+							Speed = 2;
+						}
+						with NewObject
+						{
+							Xsp = Speed * dsin(Angle) * Direction;
+							Ysp = Speed * dcos(Angle);
+						}
 				
-					if Direction
-					{ 
-						Angle -= 22.5;
+						if Direction
+						{ 
+							Angle -= 22.5;
+						}
+						Direction *= -1
 					}
-					Direction *= -1
 				}
-			
+				#endregion
+				
+				#region Combine Ring
+				var CurrentRings = Player.Rings;
+				show_debug_message("Player Current Rings: " + string(CurrentRings));
+				if IsCombiRingsEnable
+				{
+					for (var i = 0; i < 8; i++) 
+					{
+						var division = abs(round((CurrentRings / 8) * 2));
+						show_debug_message("Division Current Rings: " + string(division));
+
+						// Spawn ring
+						var NewObject = instance_create(PosX, PosY, ShatteredRing);
+						with NewObject
+						{
+							Xsp = Speed * dsin(Angle) * Direction;
+							Ysp = Speed * dcos(Angle);
+							SavedRings = abs(round((CurrentRings / 8) * 2));
+						}
+
+						if Direction
+						{ 
+							Angle -= 22.5;
+						}
+						Direction *= -1
+					}
+				}
+				#endregion
+
 				Rings		    = 0;
+				IsCombiRingsEnable =false; // We not longer have the combine effect
 				LivesRewards[0] = 100;
 			}
 			

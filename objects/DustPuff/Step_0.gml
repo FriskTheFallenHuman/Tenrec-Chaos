@@ -11,7 +11,7 @@
 	{
 		return;
 	}
-	if !(Player.Animation == AnimSkid or Player.GlideState > GlideFall)
+	if !(Player.Animation == AnimSkid)
 	{
 		return;
 	}

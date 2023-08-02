@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "fade_check",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game Functions",
-    "path": "folders/Game Functions.yy",
+    "name": "Drawing",
+    "path": "folders/Game Functions/Drawing.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "fade_check",
-  "tags": [],
-  "resourceType": "GMScript",
 }

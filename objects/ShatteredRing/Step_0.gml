@@ -71,10 +71,15 @@
 		}
 		else if object_check_player(ColHitbox)
 		{
-			Player.Rings++;
+			// Save the combi ring
+			if SavedRings > 0
+				Player.Rings += SavedRings;
+			else
+				Player.Rings++;
+
 			audio_sfx_play(Player.Rings mod 2 == 0 ? sfxRingLeft : sfxRingRight, false);
 	
-			instance_create(x, y, RingSparkle);	
+			instance_create(x, y, RingSparkle);
 			instance_destroy();
 		}
 	}

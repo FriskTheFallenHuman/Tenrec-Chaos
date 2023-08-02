@@ -17,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 40,
   "height": 32,
   "textureGroupId": {
@@ -73,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Characters",
-    "path": "folders/Characters.yy",
+    "name": "Normal",
+    "path": "folders/Characters/Surge The Tenrec/Normal.yy",
   },
 }

@@ -1,12 +1,11 @@
 {
+  "resourceType": "GMScript",
+  "resourceVersion": "1.0",
+  "name": "player_damage",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Game Functions",
-    "path": "folders/Game Functions.yy",
+    "name": "Misc",
+    "path": "folders/Game Functions/Misc.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "player_damage",
-  "tags": [],
-  "resourceType": "GMScript",
 }
